@@ -1,0 +1,24 @@
+{
+  "seed": 42,
+  "lookback_days": 180,
+  "horizon_days": 30,
+  "clv_scenario": {
+    "months": 6,
+    "gross_margin": 0.25,
+    "monthly_survival": 0.9,
+    "annual_discount_rate": 0.1
+  },
+  "crm": {
+    "budget_usd": 250,
+    "discount_usd": 2,
+    "contact_cost_usd": 0.05,
+    "assumed_absolute_uplift": 0.1,
+    "gross_margin": 0.25,
+    "exclude_baseline_purchase_above": 0.8,
+    "minimum_observed_history_days": 30
+  },
+  "model": {
+    "selection_metric": "validation_average_precision",
+    "random_forest_trees": 200
+  }
+}

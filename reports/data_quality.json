@@ -1,0 +1,386 @@
+{
+  "files": {
+    "campaign_desc": {
+      "rows": 30,
+      "bytes": 540,
+      "columns": [
+        {
+          "name": "DESCRIPTION",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "CAMPAIGN",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "START_DAY",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "END_DAY",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        }
+      ]
+    },
+    "campaign_table": {
+      "rows": 7208,
+      "bytes": 95874,
+      "columns": [
+        {
+          "name": "DESCRIPTION",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "household_key",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "CAMPAIGN",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        }
+      ]
+    },
+    "causal_data": {
+      "rows": 36786524,
+      "bytes": 695858427,
+      "columns": [
+        {
+          "name": "PRODUCT_ID",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "STORE_ID",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "WEEK_NO",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "display",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "mailer",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        }
+      ]
+    },
+    "coupon": {
+      "rows": 124548,
+      "bytes": 2822804,
+      "columns": [
+        {
+          "name": "COUPON_UPC",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "PRODUCT_ID",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "CAMPAIGN",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        }
+      ]
+    },
+    "coupon_redempt": {
+      "rows": 2318,
+      "bytes": 54108,
+      "columns": [
+        {
+          "name": "household_key",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "DAY",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "COUPON_UPC",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "CAMPAIGN",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        }
+      ]
+    },
+    "hh_demographic": {
+      "rows": 801,
+      "bytes": 44349,
+      "columns": [
+        {
+          "name": "AGE_DESC",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "MARITAL_STATUS_CODE",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "INCOME_DESC",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "HOMEOWNER_DESC",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "HH_COMP_DESC",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "HOUSEHOLD_SIZE_DESC",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "KID_CATEGORY_DESC",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "household_key",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        }
+      ]
+    },
+    "product": {
+      "rows": 92353,
+      "bytes": 6429896,
+      "columns": [
+        {
+          "name": "PRODUCT_ID",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "MANUFACTURER",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "DEPARTMENT",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 15
+        },
+        {
+          "name": "BRAND",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "COMMODITY_DESC",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 15
+        },
+        {
+          "name": "SUB_COMMODITY_DESC",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 15
+        },
+        {
+          "name": "CURR_SIZE_OF_PRODUCT",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 30607
+        }
+      ]
+    },
+    "transaction_data": {
+      "rows": 2595732,
+      "bytes": 141742346,
+      "columns": [
+        {
+          "name": "household_key",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "BASKET_ID",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "DAY",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "PRODUCT_ID",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "QUANTITY",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "SALES_VALUE",
+          "inferred_type": "DOUBLE",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "STORE_ID",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "RETAIL_DISC",
+          "inferred_type": "DOUBLE",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "TRANS_TIME",
+          "inferred_type": "VARCHAR",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "WEEK_NO",
+          "inferred_type": "BIGINT",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "COUPON_DISC",
+          "inferred_type": "DOUBLE",
+          "nulls": 0,
+          "blank_strings": 0
+        },
+        {
+          "name": "COUPON_MATCH_DISC",
+          "inferred_type": "DOUBLE",
+          "nulls": 0,
+          "blank_strings": 0
+        }
+      ]
+    }
+  },
+  "checks": {
+    "transaction_overview": {
+      "first_day": 1,
+      "last_day": 711,
+      "households": 2500,
+      "baskets": 276484,
+      "products": 92339,
+      "stores": 582,
+      "source_sales_value_sum": 8057463.080040768,
+      "negative_quantity_rows": 0,
+      "zero_quantity_rows": 14466,
+      "negative_sales_rows": 0,
+      "zero_sales_rows": 18850,
+      "positive_discount_rows": 36
+    },
+    "transaction_exact_duplicates": {
+      "duplicate_groups": 0,
+      "excess_rows": 0
+    },
+    "product_key_duplicates": {
+      "duplicate_keys": 0
+    },
+    "demographic_key_duplicates": {
+      "duplicate_keys": 0
+    },
+    "campaign_key_duplicates": {
+      "duplicate_keys": 0
+    },
+    "campaign_assignment_duplicates": {
+      "duplicate_keys": 0
+    },
+    "basket_consistency": {
+      "inconsistent_baskets": 0
+    },
+    "product_reference": {
+      "unmatched_transaction_rows": 0
+    },
+    "demographic_coverage": {
+      "purchasing_households": 2500,
+      "with_demographics": 801
+    },
+    "campaign_reference": {
+      "unmatched_assignments": 0
+    },
+    "campaign_periods": {
+      "first_start_day": 224,
+      "last_end_day": 719,
+      "invalid_periods": 0
+    }
+  },
+  "scope_notes": [
+    "Types are inferred for exploration, not an approved source schema.",
+    "Source sales values are summed without changing discount treatment; revenue semantics require source documentation.",
+    "No raw rows were changed or deleted.",
+    "causal_data and coupon mapping uniqueness are not checked in this initial audit.",
+    "Full-row transaction duplicates are observations to investigate, not an instruction to delete rows.",
+    "Source day numbers are retained; no calendar dates are invented."
+  ]
+}

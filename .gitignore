@@ -1,0 +1,22 @@
+# Local data and secrets
+/data/
+.env
+.env.*
+!.env.example
+kaggle.json
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Local analytical databases
+*.duckdb
+*.duckdb.wal
+
+# OS
+.DS_Store
+Thumbs.db
