@@ -6,7 +6,7 @@ A portfolio analysis of grocery purchase behaviour and budget-aware CRM targetin
 
 Which households should receive which coupons to encourage additional purchases without subsidising purchases that would happen anyway?
 
-The main analysis currently provides validated purchase metrics, aggregate category/discount exploration, interpretable RFM, a no-purchase forecast and **audience selection for one hypothetical USD 2 offer**. It does not estimate causal coupon uplift or report realised campaign profit. A separate [optional recommendation experiment](additional/notebooks/03_coupon_recommendation_experiment.ipynb) ranks actual historical coupons for TypeB/TypeC recipients and evaluates future product relevance. It does not change the main USD 2 audience-selection policy.
+The main analysis currently provides validated purchase metrics, aggregate category/discount exploration, interpretable RFM, a no-purchase forecast and **audience selection for one hypothetical USD 2 offer**. It also forecasts weekly retailer proceeds for the observed household sample. It does not estimate causal coupon uplift or report realised campaign profit. A separate [optional recommendation experiment](additional/notebooks/03_coupon_recommendation_experiment.ipynb) ranks actual historical coupons for TypeB/TypeC recipients and evaluates future product relevance. It does not change the main USD 2 audience-selection policy.
 
 ## Main reading order
 
@@ -18,8 +18,25 @@ The main analysis currently provides validated purchase metrics, aggregate categ
 | [04 RFM segments](notebooks/04_rfm_segments.ipynb) | Describe households with simple, explainable purchase-history segments |
 | [05 No-purchase prediction](notebooks/05_no_purchase_prediction.ipynb) | Compare chronological baselines/models; risk is not coupon responsiveness |
 | [06 CRM scenarios](notebooks/06_crm_campaign_scenarios.ipynb) | Select a budget-constrained audience for a single assumed offer and examine sensitivity |
+| [07 Weekly sales forecasting](notebooks/07_weekly_sales_forecast.ipynb) | Compare four-week forecasts using rolling validation and a later test |
 
 Start with the [focused results](reports/project_results.md) and [main chart gallery](reports/visual_findings.md). See the [model card](docs/model_card.md) and [experiment plan](docs/crm_experiment_plan.md) for limitations.
+
+## Weekly sales forecast
+
+The [forecast notebook](notebooks/07_weekly_sales_forecast.ipynb) aggregates recorded
+`SALES_VALUE` by source week and compares last-week, four-week average and simple
+exponential smoothing forecasts. Four rolling validation origins select the model;
+five later origins evaluate it. The four-week average was selected, with test MAE
+of USD 5,337 and WAPE of 5.91% on this historical sample. These errors describe
+repeated four-week forecasts, not causal campaign impact or a guarantee of future
+accuracy. The plot's validation-error band is illustrative, not a calibrated
+prediction interval. Source weeks 1 and 102 are incomplete; the final forecast is
+as of the end of week 101, so week 102 is already partially observed in the raw
+data. Results apply only to the recorded households, not all store sales. Calendar
+dates are unverified and annual seasonality is not estimated.
+
+![Weekly sales forecast](reports/figures/07_weekly_sales_forecast.png)
 
 ## Additional analysis
 

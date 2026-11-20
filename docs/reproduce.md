@@ -12,9 +12,9 @@ Keep an existing working .venv rather than recreating it unnecessarily. Place or
 
 ## Main reading order
 
-Run notebooks 01_data_understanding, 02_customer_metrics, 03_categories_and_discounts, 04_rfm_segments, 05_no_purchase_prediction, and 06_crm_campaign_scenarios. Select the project .venv/Scripts/python.exe interpreter and Run All. Each reconstructs its own needed state; notebook 06 first needs the canonical pipeline outputs.
+Run notebooks 01_data_understanding, 02_customer_metrics, 03_categories_and_discounts, 04_rfm_segments, 05_no_purchase_prediction, 06_crm_campaign_scenarios, and 07_weekly_sales_forecast. Select the project .venv/Scripts/python.exe interpreter and Run All. Each reconstructs its own needed state; notebook 06 first needs the canonical pipeline outputs.
 
-Notebook 01 inventories all eight sources, including causal_data. Notebook 03 needs only transactions and products. RFM notebook 04 contains only interpretable segments. Notebook 05 is a historical purchase-risk forecast, not a coupon response model. Notebook 06 selects one hypothetical offer, not COUPON_UPC recommendations.
+Notebook 01 inventories all eight sources, including causal_data. Notebook 03 needs only transactions and products. RFM notebook 04 contains only interpretable segments. Notebook 05 is a historical purchase-risk forecast, not a coupon response model. Notebook 06 selects one hypothetical offer, not COUPON_UPC recommendations. Notebook 07 reads only the raw transaction file, executes its own rolling forecast evaluation, and writes its figure to reports/figures. It forecasts as of the end of complete source week 101; week 102 is partially observed and excluded.
 
 ## Refresh the existing technical outputs
 
