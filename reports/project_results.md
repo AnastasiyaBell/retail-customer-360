@@ -13,6 +13,19 @@ The intended decision is which household should receive which coupon. Current co
 - Selected no-purchase model: random_forest; frozen-test average precision 0.5446, ROC AUC 0.8731. This predicts non-purchase under historical promotion conditions, not a verified untreated counterfactual.
 - Default hypothetical-offer scenario selects 91 households with maximum reserved cost USD 186.55 under budget USD 250.00. Scenario incremental contribution USD 74.92 depends on assumed uplift/margin and a baseline-probability proxy; it is not realised campaign impact.
 
+## CRM purchase-value scenario
+
+The default scenario compares the same 91 selected households over a 30-day horizon. It uses the predicted purchase probability under historical promotion conditions as the baseline proxy (`p0`) and adds an assumed 10 percentage points, capped at 100%, for the coupon scenario (`p1`). Both calculations value a purchase using the household's historical 180-day average basket value.
+
+| Quantity | Calculation across selected households | USD |
+|---|---|---:|
+| Expected baseline purchase value | Sum of `p0 × average_basket_180` | 3,728.00 |
+| Expected additional purchase value before campaign costs | Sum of `(p1 − p0) × average_basket_180` | 746.31 |
+| Expected coupon and contact costs | Sum of `p1 × 2.00 + 0.05` | 111.66 |
+| Expected additional purchase value after campaign costs | Additional purchase value minus expected campaign costs | 634.65 |
+
+Dividing USD 634.65 by USD 3,728.00 gives **17.0%**. The values can be reproduced from `data/processed/portfolio/crm_targets.csv` using `p0_purchase`, `assumed_p1_purchase`, `average_basket_180`, and `expected_offer_cost_usd`. Applying the assumed 25% gross margin to the USD 746.31 before subtracting campaign costs gives the separate USD 74.92 incremental contribution estimate. A household-randomised pilot would be needed to measure the campaign's effect on sales. [CRM notebook](../notebooks/06_crm_campaign_scenarios.ipynb) · [Experiment plan](../docs/crm_experiment_plan.md)
+
 ## Main figures
 
 ![RFM segments](figures/04_rfm_segments.png)

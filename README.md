@@ -22,6 +22,10 @@ The main analysis currently provides validated purchase metrics, aggregate categ
 
 Start with the [focused results](reports/project_results.md) and [main chart gallery](reports/visual_findings.md). See the [model card](docs/model_card.md) and [experiment plan](docs/crm_experiment_plan.md) for limitations.
 
+## CRM purchase-value scenario
+
+For the 91 selected households, the hypothetical USD 2 coupon scenario projects **17.0% higher expected 30-day purchase value after coupon and contact costs** (USD 634.65 above a USD 3,728.00 baseline). The calculation assumes a 10 percentage point increase in purchase probability and uses model predictions under historical promotion conditions as the baseline proxy. [Calculation and assumptions](reports/project_results.md#crm-purchase-value-scenario)
+
 ## Weekly sales forecast
 
 The [forecast notebook](notebooks/07_weekly_sales_forecast.ipynb) aggregates recorded
